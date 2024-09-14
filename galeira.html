@@ -10,6 +10,79 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-dialog {
+            max-width: 90%;
+            margin: 0;
+        }
+
+        .modal-content {
+            border: none;
+            background: transparent;
+        }
+
+        .modal-body {
+            padding: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel {
+            width: 80vw;
+            /* Ajuste conforme necessário */
+            max-width: 800px;
+            /* Tamanho fixo máximo */
+            height: 80vh;
+            /* Ajuste conforme necessário */
+            max-height: 600px;
+            /* Tamanho fixo máximo */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            /* Ajuste a altura máxima da imagem */
+            object-fit: contain;
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1050;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            opacity: 0.75;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-close:hover {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,7 +98,7 @@
                         <a class="nav-link" href="./enchente.html">Enchente</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active-page" href="./galeira.html">Galeria</a>
+                        <a class="nav-link active-page" href="./galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://instagram.com/periferiafeminista"
@@ -39,30 +112,145 @@
         </nav>
     </div>
 
-    <div class="container">
-        <footer class="py-3 my-4">
-            <hr>
-            <p class="text-center text-muted">Trabalho realizado com fins acadêmicos para a disciplina de Jornalismo
-                Digital na Famecos com o Prof. Moreno Osório</p>
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <!-- Alana Borges, Luciana Weber, Nathalia Ferrai e Nicole Ribeiro -->
-                <li class="nav-item"><a href="https://instagram.com/alanaborgesr" target="_blank"
-                        class="nav-link px-2 text-muted">Alana Borges</a></li>
-                <li class="nav-item"><a href="https://instagram.com/lu_wber" target="_blank"
-                        class="nav-link px-2 text-muted">Luciana Weber</a></li>
-                <li class="nav-item"><a href="https://instagram.com/nathi.ferrari" target="_blank"
-                        class="nav-link px-2 text-muted">Nathalia Ferrari</a></li>
-                <li class="nav-item"><a href="https://instagram.com/nicolew.ribeiro" target="_blank"
-                        class="nav-link px-2 text-muted">Nicole Ribeiro</a></li>
-            </ul>
-            <p class="text-center text-muted">© 2024 Samuel de Oliveira</p>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Galeria do Morro da Cruz</h1>
+        <p class="texto-materia">
 
-        </footer>
+            Imagens reproduzidas no dia 28 de Abril de 2024. Nesse dia, foi realizado a instalação da fossa ecológica,
+            junto de um almoço para a comunidade.
+        </p>
+        <p class="texto-materia">
+            Fotos tiradas por: Alana Borges, Nathalia Ferrari e Nicole Ribeiro
+        </p>
+        <div class="row">
+            <!-- Item de Galeria 1 -->
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Imagem 1" data-bs-toggle="modal"
+                        data-bs-target="#imageModal" data-bs-img-src="https://via.placeholder.com/300x200"
+                        data-bs-slide-to="0">
+                </div>
+            </div>
+            <!-- Item de Galeria 2 -->
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x400" alt="Imagem 2" data-bs-toggle="modal"
+                        data-bs-target="#imageModal" data-bs-img-src="https://via.placeholder.com/300x400"
+                        data-bs-slide-to="1">
+                </div>
+            </div>
+            <!-- Item de Galeria 3 -->
+            <div class="col-md-4 col-lg-6 mb-4">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400" alt="Imagem 3" data-bs-toggle="modal"
+                        data-bs-target="#imageModal" data-bs-img-src="https://via.placeholder.com/600x400"
+                        data-bs-slide-to="2">
+                </div>
+            </div>
+            <!-- Item de Galeria 4 -->
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Imagem 4" data-bs-toggle="modal"
+                        data-bs-target="#imageModal" data-bs-img-src="https://via.placeholder.com/300x300"
+                        data-bs-slide-to="3">
+                </div>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"> Fechar</button> -->
+                    <button type="button" class="btn-close close" aria-label="Close" data-bs-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    <div id="carouselExampleControls" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-3 my-4">
+        <hr>
+        <p class="text-center text-muted">Trabalho realizado com fins acadêmicos para a disciplina de Jornalismo Digital
+            na Famecos com o Prof. Moreno Osório</p>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <!-- Alana Borges, Luciana Weber, Nathalia Ferrai e Nicole Ribeiro -->
+            <li class="nav-item"><a href="https://instagram.com/alanaborgesr" target="_blank"
+                    class="nav-link px-2 text-muted">Alana Borges</a></li>
+            <li class="nav-item"><a href="https://instagram.com/lu_wber" target="_blank"
+                    class="nav-link px-2 text-muted">Luciana Weber</a></li>
+            <li class="nav-item"><a href="https://instagram.com/nathi.ferrari" target="_blank"
+                    class="nav-link px-2 text-muted">Nathalia Ferrari</a></li>
+            <li class="nav-item"><a href="https://instagram.com/nicolew.ribeiro" target="_blank"
+                    class="nav-link px-2 text-muted">Nicole Ribeiro</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2024 Samuel de Oliveira</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modal = document.getElementById('imageModal');
+            var carouselInner = document.querySelector('#carouselExampleControls .carousel-inner');
+            var items = [
+                'https://via.placeholder.com/300x200',
+                'https://via.placeholder.com/300x400',
+                'https://via.placeholder.com/600x400',
+                'https://via.placeholder.com/300x300'
+            ];
+
+            modal.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget; // Botão que acionou o modal
+                var slideTo = button.getAttribute('data-bs-slide-to'); // Obtém o índice do slide
+                var imgSrc = button.getAttribute('data-bs-img-src'); // Obtém o src da imagem
+
+                // Limpar os itens do carousel
+                carouselInner.innerHTML = '';
+
+                // Adicionar os itens ao carousel
+                items.forEach((src, index) => {
+                    var carouselItem = document.createElement('div');
+                    carouselItem.className = 'carousel-item';
+                    if (index === 0) {
+                        carouselItem.classList.add('active');
+                    }
+                    var img = document.createElement('img');
+                    img.src = src;
+                    img.className = 'd-block w-100';
+                    img.alt = '...';
+                    carouselItem.appendChild(img);
+                    carouselInner.appendChild(carouselItem);
+                });
+
+                // Definir o slide ativo
+                var carousel = new bootstrap.Carousel('#carouselExampleControls');
+                carousel.to(slideTo);
+            });
+        });
+    </script>
 </body>
 
 </html>
