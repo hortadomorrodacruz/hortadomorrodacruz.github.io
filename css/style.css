@@ -87,3 +87,54 @@ h1 {
     background-color: #f57c00 !important;
     /* Cor laranja com !important para garantir que sobreponha outras regras */
 }
+
+
+
+.image-text-container {
+    margin-bottom: 30px;
+    /* Espaçamento entre as seções */
+}
+
+.image-text-container img {
+    max-width: 100%;
+    /* Garante que a imagem não exceda o tamanho do contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+/* Define a cor dos links como branco */
+.navbar .nav-link {
+    color: white;
+}
+
+.active-page {
+    color: black !important;
+}
+
+/* Define a cor dos links como preta quando o mouse passar sobre eles */
+.navbar .nav-link:hover {
+    color: black;
+}
+
+
+/* teste */
+
+
+.title-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    /* Espaço para a barra */
+    border-left: 10px solid orange;
+    /* Barra laranja */
+}
+
+.title-wrapper {
+    margin: 0;
+    /* Remove a margem padrão do <h1> */
+    font-size: 24px;
+    /* Tamanho da fonte do título */
+    color: #333;
+    /* Cor do texto do título */
+}
