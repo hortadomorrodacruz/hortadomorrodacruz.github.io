@@ -44,7 +44,7 @@ h1 {
 }
 
 .carousel {
-    height: 400px;
+    height: 500px;
     /* Define a altura do carrossel */
     overflow: hidden;
     /* Garante que o conteúdo não exceda o contêiner */
