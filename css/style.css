@@ -33,6 +33,17 @@ h1 {
     /* Ajusta a imagem para cobrir o contêiner */
 }
 
+.col-lg-3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir o contêiner sem distorção */
+    max-width: 140px;
+    max-height: 140px;
+    border-radius: 50%;
+}
+
+
 .no-gutters {
     margin: 0;
     padding: 0;
